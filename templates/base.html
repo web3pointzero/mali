@@ -47,17 +47,17 @@
   <!-- header -->
   <header>
     <div class="logo">
-      <h1><a href="/mali/home/">Serdar <i>Akdemir</i></a></h1>
+      <h1><a href="{% url mali.akdemir.views.index %}">Serdar <i>Akdemir</i></a></h1>
       <span class="description">Serbest Muhasebeci Mali Müşavir</span> </div>
     <!-- <a href="#" class="rss">RSS Submit</a> -->
     <nav>
       <ul>
-        <li><a id="nav-index" href="/mali/home/">Ana Sayfa</a></li>
-        <li><a id="nav-about" href="/mali/about/">Hakkımızda</a></li>
-        <li><a id="nav-hizmetler" href="/mali/hizmetler/">Hizmetler</a></li>
-        <li><a id="nav-makaleler" href="/mali/makaleler/">Makaleler</a></li>
-        <li><a id="nav-sorucevap" href="/mali/sorucevap/">Soru & Cevap</a></li>
-        <li><a id="nav-iletisim" href="/mali/iletisim/">İletişim</a></li>
+        <li><a id="nav-index" href="{% url mali.akdemir.views.index %}">Ana Sayfa</a></li>
+        <li><a id="nav-about" href="{% url mali.akdemir.views.about %}">Hakkımızda</a></li>
+        <li><a id="nav-hizmetler" href="{% url mali.akdemir.views.hizmetler %}">Hizmetler</a></li>
+        <li><a id="nav-makaleler" href="{% url mali.akdemir.views.makaleler %}">Makaleler</a></li>
+        <li><a id="nav-sorucevap" href="{% url mali.akdemir.views.sorucevap %}">Soru & Cevap</a></li>
+        <li><a id="nav-iletisim" href="{% url mali.akdemir.views.iletisim %}">İletişim</a></li>
       </ul>
     </nav>
   </header>
@@ -85,23 +85,23 @@
       <div class="wrapper">
         <div class="grid_4 divider">
           <div class="inner">
-            <h3><a href="/mali/notdefteri/"><img src="/mali/static/images/icon1.png" alt="">Not Defteri</a><span></span></h3>
-            Wnec porta diam eu massa. Quisque diam  vitae, pede. Donec eget tellus non erat lacinia fermen tum. Donec in velit ve... <a href="/mali/notdefteri/" class="link1">Devamı...</a>
+            <h3><a href="{% url mali.akdemir.views.notdefteri %}"><img src="/mali/static/images/icon1.png" alt="">Not Defteri</a><span></span></h3>
+            Wnec porta diam eu massa. Quisque diam  vitae, pede. Donec eget tellus non erat lacinia fermen tum. Donec in velit ve... <a href="{% url mali.akdemir.views.notdefteri %}" class="link1">Devamı...</a>
           </div>
         </div>
         <div class="grid_4 divider">
           <div class="inner">
-            <h3><a href="/mali/kanunlar/"><img src="/mali/static/images/icon2.png" alt="">Kanunlar</a><span></span></h3>
-            Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec llus non erat lacini a fermentc in velit ve... <a href="/mali/kanunlar/" class="link1">Devamı...</a>
+            <h3><a href="{% url mali.akdemir.views.kanunlar %}"><img src="/mali/static/images/icon2.png" alt="">Kanunlar</a><span></span></h3>
+            Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec llus non erat lacini a fermentc in velit ve... <a href="{% url mali.akdemir.views.kanunlar %}" class="link1">Devamı...</a>
           </div>
         </div>
         <div class="grid_4">
           <div class="inner">
             <h3><img src="/mali/static/images/icon3.png" alt="">Haberler<span></span></h3>
-            Ekonomi Haberleri için <a href="/ekonomi/"><b>tıklayın.</b></a><br/>
-            Son Dakika Haberleri için <a href="/sondakika/"><b>tıklayın.</b></a><br/>
-            Güncel Mevzuattaki Gelişmeler için <a href="/guncelmevzuat/"><b>tıklayın.</b></a>
-            Basından Yazılar, Yorum ve Haberler için <a href="/basin/"><b>tıklayın.</b></a><br/>
+            Ekonomi Haberleri için <a href="{% url mali.akdemir.views.ekonomi %}"><b>tıklayın.</b></a><br/>
+            Son Dakika Haberleri için <a href="{% url mali.akdemir.views.sondakika %}"><b>tıklayın.</b></a><br/>
+            Güncel Mevzuattaki Gelişmeler için <a href="{% url mali.akdemir.views.guncelmevzuat %}"><b>tıklayın.</b></a>
+            Basından Yazılar, Yorum ve Haberler için <a href="{% url mali.akdemir.views.basin %}"><b>tıklayın.</b></a><br/>
           </div>
         </div>
       </div>
@@ -113,13 +113,13 @@
   <!-- footer -->
   <footer>
   	<nav>
-  	  <ul>
-  	  <li><a href=".html">Hakkımızda</a></li>
-  	  <li><a href=".html">Hizmetler</a></li>
-  	  <li><a href=".html">Makaleler</a></li>
-  	  <li><a href=".html">Soru&Cevap</a></li>
-  	  <li><a href=".html">İletişim</a></li>
-      </ul>
+ 	<ul>
+		<li><a href="{% url mali.akdemir.views.about %}">Hakkımızda</a></li>
+		<li><a href="{% url mali.akdemir.views.hizmetler %}">Hizmetler</a></li>
+		<li><a href="{% url mali.akdemir.views.makaleler %}">Makaleler</a></li>
+		<li><a href="{% url mali.akdemir.views.sorucevap %}">Soru & Cevap</a></li>
+		<li><a href="{% url mali.akdemir.views.iletisim %}">İletişim</a></li>
+	</ul>
   	</nav>
     SMMM Serdar Akdemir  &copy; 2011 &bull; <a href="index-6.html">Privacy Policy</a>
   </footer>

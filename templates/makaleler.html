@@ -15,10 +15,9 @@
                 	<h2>Makaleler</h2><hr/>
                 	{% for makale in makale_list.object_list %}
                   <div class="wrapper">
-                    <h2><a href="/makaleler/{{ makale.id }}" class="link1">{{ makale.title }}</a></h2>
-                    <!-- <img src="/static/images/1page-img1.jpg" alt="" class="img-indent"> -->
+                    <h2><a href="{% url mali.akdemir.views.makale_detay makale.id %}" class="link1">{{ makale.title }}</a></h2>
                     <p>{{ makale.content|truncatewords_html:50|safe }}</p>
-                    <a href="/makaleler/{{ makale.id }}">Makalenin devamı için tıklayınız.</a>
+                    <a href="{% url mali.akdemir.views.makale_detay makale.id %}">Makalenin devamı için tıklayınız.</a>
                   </div><hr/>
                   {% endfor %}
                   <div class="pagination">

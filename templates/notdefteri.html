@@ -15,10 +15,9 @@
                 	<h2>Not Defteri</h2><hr/>
                 	{% for notdefteri in notdefteri_list.object_list %}
                   <div class="wrapper">
-                    <h2><a href="/notdefteri/{{ notdefteri.id }}" class="link1">{{ notdefteri.title }}</a></h2>
-                    <!-- <img src="/static/images/1page-img1.jpg" alt="" class="img-indent"> -->
+                    <h2><a href="{% url mali.akdemir.views.notdefteri_detay notdefteri.id %}" class="link1">{{ notdefteri.title }}</a></h2>
                     <p>{{ notdefteri.content|truncatewords_html:50|safe }}</p>
-                    <a href="/notdefteri/{{ notdefteri.id }}">Not defterinin devamı için tıklayınız.</a>
+                    <a href="{% url mali.akdemir.views.notdefteri_detay notdefteri.id %}">Not defterinin devamı için tıklayınız.</a>
                   </div><hr/>
                   {% endfor %}
                   <div class="pagination">
