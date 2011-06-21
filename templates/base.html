@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/mali/static/css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="/mali/static/css/grid.css" type="text/css" media="all">
+<link rel="stylesheet" href="/mali/static/css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="/mali/static/js/jquery-1.4.2.min.js" ></script>
+<script type="text/javascript" src="/mali/static/js/jquery.anythingslider.js"></script>
+<script type="text/javascript" src="/mali/static/js/jquery.easing.1.2.js"></script>
+<script type="text/javascript">
+    
+	function formatText(index, panel) {
+		return index + "";
+		}
+	
+			$(function () {
+			
+				$('.anythingSlider').anythingSlider({
+					easing: "easeInOutExpo",        // Anything other than "linear" or "swing" requires the easing plugin
+					autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
+					delay: 3000,                    // How long between slide transitions in AutoPlay mode
+					startStopped: false,            // If autoPlay is on, this can force it to start stopped
+					animationTime: 600,             // How long the slide transition takes
+					hashTags: true,                 // Should links change the hashtag in the URL?
+					buildNavigation: true,          // If true, builds and list of anchor links to link to each slide
+					pauseOnHover: true,             // If true, and autoPlay is enabled, the show will pause on hover
+					startText: "Play",             // Start text
+					stopText: "Stop"               // Stop text
+				});
+			});
+</script>
+<!--[if lt IE 7]>
+  <link rel="stylesheet" href="/mali/static/css/ie/ie6.css" type="text/css" media="screen">
+  <script type="text/javascript" src="/mali/static/js/ie_png.js"></script>
+  <script type="text/javascript">
+      ie_png.fix('.png');
+  </script>
+<![endif]-->
+<!--[if lt IE 9]>
+  	<script type="text/javascript" src="/mali/static/js/html5.js"></script>
+  <![endif]-->
+</head>
+<body id="section-{% block sayfa %}{% endblock %}">
+<div id="main">
+  <!-- header -->
+  <header>
+    <div class="logo">
+      <h1><a href="/mali/home/">Serdar <i>Akdemir</i></a></h1>
+      <span class="description">Serbest Muhasebeci Mali Müşavir</span> </div>
+    <!-- <a href="#" class="rss">RSS Submit</a> -->
+    <nav>
+      <ul>
+        <li><a id="nav-index" href="/mali/home/">Ana Sayfa</a></li>
+        <li><a id="nav-about" href="/mali/about/">Hakkımızda</a></li>
+        <li><a id="nav-hizmetler" href="/mali/hizmetler/">Hizmetler</a></li>
+        <li><a id="nav-makaleler" href="/mali/makaleler/">Makaleler</a></li>
+        <li><a id="nav-sorucevap" href="/mali/sorucevap/">Soru & Cevap</a></li>
+        <li><a id="nav-iletisim" href="/mali/iletisim/">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+{% block main-banner %}
+  <section id="main-banner">
+    <div class="intro">
+      <div class="inner"> <strong>Vergiler...</strong> falan bunlar enteresan <span>şeyler!</span> </div>
+    </div>
+    <div class="anythingSlider">
+      <div class="wrapper">
+        <ul>
+          <li><img src="/mali/static/images/slide1.png" alt=""></li>
+          <li><img src="/mali/static/images/slide2.png" alt=""></li>
+          <li><img src="/mali/static/images/slide3.png" alt=""></li>
+          <li><img src="/mali/static/images/slide4.png" alt=""></li>
+          <li><img src="/mali/static/images/slide5.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+{% block bigbuttons %}
+  <aside class="top">
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_4 divider">
+          <div class="inner">
+            <h3><a href="/mali/notdefteri/"><img src="/mali/static/images/icon1.png" alt="">Not Defteri</a><span></span></h3>
+            Wnec porta diam eu massa. Quisque diam  vitae, pede. Donec eget tellus non erat lacinia fermen tum. Donec in velit ve... <a href="/mali/notdefteri/" class="link1">Devamı...</a>
+          </div>
+        </div>
+        <div class="grid_4 divider">
+          <div class="inner">
+            <h3><a href="/mali/kanunlar/"><img src="/mali/static/images/icon2.png" alt="">Kanunlar</a><span></span></h3>
+            Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec llus non erat lacini a fermentc in velit ve... <a href="/mali/kanunlar/" class="link1">Devamı...</a>
+          </div>
+        </div>
+        <div class="grid_4">
+          <div class="inner">
+            <h3><img src="/mali/static/images/icon3.png" alt="">Haberler<span></span></h3>
+            Ekonomi Haberleri için <a href="/ekonomi/"><b>tıklayın.</b></a><br/>
+            Son Dakika Haberleri için <a href="/sondakika/"><b>tıklayın.</b></a><br/>
+            Güncel Mevzuattaki Gelişmeler için <a href="/guncelmevzuat/"><b>tıklayın.</b></a>
+            Basından Yazılar, Yorum ve Haberler için <a href="/basin/"><b>tıklayın.</b></a><br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+{% endblock %}
+{% block content %}
+{% endblock %}
+  <!-- footer -->
+  <footer>
+  	<nav>
+  	  <ul>
+  	  <li><a href=".html">Hakkımızda</a></li>
+  	  <li><a href=".html">Hizmetler</a></li>
+  	  <li><a href=".html">Makaleler</a></li>
+  	  <li><a href=".html">Soru&Cevap</a></li>
+  	  <li><a href=".html">İletişim</a></li>
+      </ul>
+  	</nav>
+    SMMM Serdar Akdemir  &copy; 2011 &bull; <a href="index-6.html">Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>
